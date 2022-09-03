@@ -1,6 +1,7 @@
 import clsx from "clsx"
 import { useState } from "react"
 import { BsFileEarmarkPlusFill, BsXLg } from "react-icons/bs"
+import Footer from "./components/Footer"
 import TodoCard from "./components/TodoCard"
 import TodoInput from "./components/TodoInput"
 
@@ -57,9 +58,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App min-h-screen">
       <nav className="h-16 w-full bg-white"></nav>
-      <main>
+      <main className="min-h-[calc(100vh-100px)]">
         <div
           className={clsx([
             "relative",
@@ -87,6 +88,7 @@ function App() {
           </ul>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
